@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom/client"; //we use ReactDOM to render into the DOM
+import { div } from "react-bootstrap/Card";
 
 const data = {
   image:
@@ -14,8 +15,21 @@ const data = {
 
 /**
  * define the variable 'content' here and fill it with the
- * needed code to render the bootstrap card
+ * needed code to render the bootstrap card\
  **/
+
+const content = (
+  <div className="card m-5 w-25">
+    <img className="card-img-top" src={data.image} alt="Card image cap" />
+    <div className="card-body">
+      <h5 className="card-title">{data.cardTitle}</h5>
+      <p className="card-text">{data.cardDescription}</p>
+      <a href={data.button.url} className="btn btn-primary">
+        {data.button.label}
+      </a>
+    </div>
+  </div>
+);
 
 const container = document.getElementById("root");
 
